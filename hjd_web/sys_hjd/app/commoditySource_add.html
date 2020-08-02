@@ -1,0 +1,124 @@
+
+<!DOCTYPE>
+<html>
+  <head>
+
+    
+        <title>添加商品源</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">    
+        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+        <meta http-equiv="description" content="This is my page">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+            
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/commoditySource_add.css"/>
+    </head>
+    
+    <body ng-app="myApp" ng-controller="commoditySource_add">
+        <div class="page">
+            <!-- 头部 start -->
+            <header class="header"><h1>添加商品源</h1></header>
+            <!-- 头部 end -->
+              <div class='page_view'>
+                <!-- 商品名称 start -->
+                <div class='view_form'>
+                  <div class='form_Commodity'>
+                    <div class='Commodity_name'>商品名称</div>
+                    <div class='Commodity_input'>
+                      <input class='input' ng-model='form.title' placeholder='请输入商品名称'></input>
+                    </div>
+                  </div>
+                </div>
+                <!-- 商品名称 end -->
+
+                <!-- 价格 start -->
+                <div class='view_form'>
+                  <div class='form_Commodity'>
+                    <div class='Commodity_name'>价格</div>
+                    <div class='Commodity_input'>
+                      <input class='input input_prices' ng-model='form.price' placeholder='请输入商品价格'></input>
+                    </div>
+                    <div class='Commodity_content'> 元/瓶</div>
+                  </div>
+                </div>
+                <!-- 价格 end -->
+
+                <!-- 头图 start -->
+                <div class='view_form'>
+                  <div class='form_Commodity'>
+                    <div class='Commodity_name'>头图</div>
+                  </div>
+                  <div class='form_img'>
+                    <div class="item_img" id="upload0">
+                      <image class="img_tt" src="images/delete.png" 
+                      ng-click="bindtapImageDelete(0)" />
+                      <img id="LAY_demo_upload0" class="item_img_img" />
+                    </div>
+                    <input type="file" id="test0" name="file" class="img_not">
+
+                    <div class="item_img" id="upload1">
+                      <image class="img_tt" src="images/delete.png" 
+                      ng-click="bindtapImageDelete(1)" />
+                      <img id="LAY_demo_upload1" class="item_img_img" />
+                    </div>
+                    <input type="file" id="test1" name="file" class="img_not">
+
+                    <div class="item_img" id="upload2">
+                      <image class="img_tt" src="images/delete.png" 
+                      ng-click="bindtapImageDelete(2)" />
+                      <img id="LAY_demo_upload2" class="item_img_img" />
+                    </div>
+                    <input type="file" id="test2" name="file" class="img_not">
+                  </div>
+                </div>
+                <!-- 头图 end -->
+
+                <!-- 商品介绍 start -->
+                <div class='view_form'>
+                  <div class='form_Commodity'>
+                    <div class='Commodity_name ' >商品介绍</div>
+                  </div>
+                  <div class='form_text'>
+                    <textarea class='text' ng-model='form.remark' placeholder='请输入商品介绍'></textarea>
+                  </div>
+                </div>
+                <!-- 商品介绍 end -->
+
+                <!-- 商品详情图 start -->
+                <div class='view_form'>
+                  <div class='form_Commodity'>
+                    <div class='Commodity_name'>商品详图</div>
+                  </div>
+                  <div class='form_img'>
+                    <div class="item_img" id="upload3">
+                      <image class="img_tt" src="images/delete.png" 
+                      ng-click="bindtapImageDelete(3)" />
+                      <img id="LAY_demo_upload3" class="item_img_img" />
+                    </div>
+                    <input type="file" id="test3" name="file" class="img_not">
+                  </div>
+                </div>
+                <!-- 商品详情图 end -->
+
+                <!-- 提交按钮 start -->
+                <div class='view_form'>
+                  <div class='form_btn'>
+                    <div class='btn' ng-click='submit()'>提交</div>
+                  </div>
+                </div>
+                <!-- 提交按钮 end -->
+              </div>
+        </div>
+        
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script src="layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/commoditySource_add.js" ></script>
+        
+    </body>
+</html>

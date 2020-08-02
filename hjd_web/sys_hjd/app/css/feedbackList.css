@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+
+ .page{
+   width: 100%;
+  height: 100%;   
+}
+.page_view{
+  width: 100%;
+  padding-top: 10px;
+}
+.view_model{
+  width: 100%;
+  height: 68px;
+  background-color: #fff;
+  margin-top: 10px;
+  padding-top:10px;
+}
+.model_content{
+  width: 76%;
+  text-align: center;
+  color: #000;
+  max-height: 63px;
+  margin-left: 5px;
+  font-size: 16px;
+  float: left;
+  overflow: hidden; /**自动隐藏文字*/
+  text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+}
+.model_btn{
+  width: 20%;
+  float: left;
+  margin-left: 5px;
+}
+.btn_update{
+  width:90%;
+  height:25px;
+  text-align:center;
+  line-height:25px;
+  font-size:13px;
+  border:1px solid #aaa;
+
+}
+.btn_update:active{
+  background-color: #ddd;
+}
+.btn_delete{
+  width:90%;
+  height:25px;
+  margin-top:5px;
+  text-align:center;
+  line-height:25px;
+  font-size:13px;
+  border:1px solid #aaa;
+
+}
+.btn_delete:active{
+  background-color: #ddd;
+}

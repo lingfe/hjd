@@ -1,0 +1,17 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-23
+ *   描述:  经销商后台
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <view class='view_model' bindtap='dealerShopInfo'>
+      <view  class="span">商品</view>
+    </view>
+    <view class='view_model' bindtap='dealerOrder'>
+      <view  class="span">订单</view>
+    </view>
+  </view>
+</view>
+

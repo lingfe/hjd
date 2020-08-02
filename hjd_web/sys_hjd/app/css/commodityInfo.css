@@ -1,0 +1,125 @@
+  @charset "utf-8";
+
+.page{
+  width: 100%;
+  height: 100%;
+}
+/*轮播图*/
+.page_view {
+  width: 100%;
+  height: auto;
+}
+.view_lunbotu{
+  width: 100%;
+}
+.swiper{
+  width: 100%;
+  height: 220px;
+}
+.swiper_img{
+  width: 100%;
+  height:220px;
+}
+
+
+/*下单*/
+.view_btn{
+  width: 100%;
+  height: 100px;
+}
+.btn{
+  position: relative;
+  top: 20px;
+  width: 50%;
+  height: 45px;
+  line-height: 45px;
+  margin: 0px auto;
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 14px;
+  background-color: #14BAC8;
+  box-shadow:2px 2px 10px #ccc;
+  border-radius: 10px;
+  color: #fff;
+}
+.btn:active{
+  opacity: 0.7;
+}
+button::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0px solid #fff;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/*最新商品*/
+.view_new{
+  width: 100%;
+}
+.title{
+  width: 97%;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  text-align: right;
+}
+.new_shangping{
+  width: 100%;
+  height: auto;
+}
+.shangping{
+  width: 96%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.shangping:active{
+ opacity: 0.7;
+}
+.new_img{
+  width: 100%;
+  margin-top: 10px;
+}
+.new_title{
+  font-size: 25px;
+  width: 100%;
+  text-align: left;
+  padding-top: 5px;
+}
+.new_laiyuan{
+  width: 100%;
+  font-size: 18px;
+  padding-top: 5px;
+  color: #666;
+}
+.new_price{
+  padding-top: 5px;
+  width: 100%;
+  font-size: 18px;
+  color: red;
+}
+
+/*送货上门*/
+.view_bottom{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  background-color: red;
+  position: fixed;
+  bottom: 0px;
+  color: #fff;
+  font-weight: bold;
+}
+.view_bottom:active{
+  opacity: 0.7;
+}

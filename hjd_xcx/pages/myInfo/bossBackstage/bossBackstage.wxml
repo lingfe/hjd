@@ -1,0 +1,25 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  老板后台
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <view class='view_model' bindtap='bindtapCommoitidy'>
+      <view  class="span">商品源</view>
+    </view>
+    <view class='view_model' bindtap='bindtapSalesData'>
+      <view  class="span">销售数据</view>
+    </view>
+    <view class='view_model' bindtap='bindtapcarouselfigure'>
+      <view  class="span">首页广告</view>
+    </view>
+    <view class='view_model' bindtap='bindtapdealerAccount'>
+      <view class="span">经销商账号</view>
+    </view>
+    <view class='view_model' bindtap='feedbackList'>
+      <view  class="span">投诉建议</view>
+    </view>
+  </view>
+</view>

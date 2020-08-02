@@ -1,0 +1,62 @@
+
+<!DOCTYPE>
+<html>
+  <head>
+
+    
+        <title>商品详细信息</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">    
+        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+        <meta http-equiv="description" content="This is my page">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+            
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/commodityInfo.css"/>
+    </head>
+    
+    <body ng-app="myApp" ng-controller="commodityInfo">
+        <div class="page">
+            <!-- 头部 start -->
+            <header class="header"><h1>商品详细信息</h1></header>
+            <!-- 头部 end -->
+              <div class='page_view'>
+                <!-- 轮播图 start -->
+                <div class='view_lunbotu'>
+                    <div class='swiper'>
+                      <div>
+                        <image class='swiper_img' src='{{item.imgUrl}}' />
+                      </div>
+                    </div>
+                </div>
+                <!-- 轮播图 end -->
+
+                <div class='view_new'>
+                  <div class='new_shangping'>
+                    <div class='shangping' >
+                      <div class='new_title'>{{commodity.title}}</div>
+                      <div class='new_laiyuan'>商品来源: {{commodity.distributorName}}</div>
+                      <div class='new_price'>{{commodity.price}} 元/瓶</div>
+                      <div class='new_img'>
+                        <image mode="widthFix" class='new_img' src='{{getImg+commodity.infoImgUrl}}' />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class='page_view'>
+                <div class='view_bottom' ng-click='bindtapSohuo()' id='{{commodity.id}}'>送货上门</div>
+              </div>
+        </div>
+        
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script type="text/javascript" src="js/commodityInfo.js" ></script>
+        
+    </body>
+</html>

@@ -1,0 +1,98 @@
+ @charset "utf-8";
+
+ .page{
+   width: 100%;
+   height: auto;
+   
+ }
+ .page_top{
+   width: 96%;
+   height: 75px;
+   line-height: 75px;
+   background-color: #000;
+   text-align: center;
+   color: #fff;
+   margin: auto;
+   margin-top: 25px;
+ }
+ .page_view{
+    width: 96%;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #fff;
+    padding-left: 5px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+ }
+ .new_title{
+  font-size: 25px;
+  width: 100%;
+  text-align: left;
+  padding-top: 5px;
+  margin-left: 15px;
+}
+.new_laiyuan{
+  width: 100%;
+  font-size: 13px;
+  padding-top: 5px;
+  color: #666;
+  margin-left: 15px;
+  padding-bottom: 10px;
+}
+.new_input{
+  margin-left: 15px;
+  padding-top: 10px;
+  height: 25px;
+}
+.input_name{
+  width: 30%;
+  line-height: 25px;
+  height: 25px;
+  color: #666;
+  font-size: 15px;
+  float: left;
+}
+.input_input{
+  width: 60%;
+  float: left;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/*数量*/
+.jian{
+  float: left;
+  width:25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px #666 solid;
+  margin-right: 10px;
+}
+.num{
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.jia{
+  float: left;
+  width:25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px #666 solid;
+  margin-right: 10px;
+}
+
+.j:active{
+  opacity: 0.7;
+}
+
+input{
+    border:none;
+}

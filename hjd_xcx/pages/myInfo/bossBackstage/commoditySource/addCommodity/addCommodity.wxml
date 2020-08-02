@@ -1,0 +1,82 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  添加商品
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <!-- 商品名称 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>商品名称</view>
+        <view class='Commodity_input'>
+          <input class='input' value='{{form.title}}' bindinput='inputName' placeholder='请输入商品名称'></input>
+        </view>
+      </view>
+    </view>
+    <!-- 商品名称 end -->
+
+    <!-- 价格 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>价格</view>
+        <view class='Commodity_input input_prices'>
+          <input class='input' value='{{form.price}}' bindinput='inputPrices' placeholder='请输入商品价格'></input>
+        </view>
+        <view class='Commodity_content'> 元/瓶</view>
+      </view>
+    </view>
+    <!-- 价格 end -->
+
+    <!-- 头图 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>头图</view>
+      </view>
+      <view class='form_img'>
+        <view wx:for="{{files}}" wx:key="*this" class="item_img" bindlongtap="previewImage" id="{{item}}">
+          <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+          <image class="img" src="{{item}}" mode="aspectFill" />
+        </view>
+        <view class="img_not" bindtap="chooseImage" wx:if="{{files.length !=3 }}">+</view>
+      </view>
+    </view>
+    <!-- 头图 end -->
+
+    <!-- 商品介绍 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name ' >商品介绍</view>
+      </view>
+      <view class='form_text'>
+        <textarea class='text' value='{{form.remark}}' bindinput='inputRemark' placeholder='请输入商品介绍'></textarea>
+      </view>
+    </view>
+    <!-- 商品介绍 end -->
+
+    <!-- 商品详情图 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>商品详图</view>
+      </view>
+      <view class='form_img'>
+        <view wx:for="{{files_info}}" 
+        wx:if="{{files_info.length == 1 }}" wx:key="*this" class="item_img" bindlongtap="previewImage" id="{{item}}">
+          <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete_info" data-img="{{item}}" />
+          <image class="img" src="{{item}}" mode="aspectFill" />
+        </view>
+        <view class="img_not" bindtap="chooseImage_info" wx:if="{{files_info.length !=1 }}">+</view>
+      </view>
+    </view>
+    <!-- 商品详情图 end -->
+
+    <!-- 提交按钮 start -->
+    <view class='view_form'>
+      <view class='form_btn'>
+        <view class='btn' bindtap='submit'>提交</view>
+      </view>
+    </view>
+    <!-- 提交按钮 end -->
+  </view>
+</view>

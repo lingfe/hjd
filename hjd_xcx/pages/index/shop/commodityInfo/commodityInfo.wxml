@@ -1,0 +1,43 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-25
+ *   描述:  商品详细信息
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <view class='view_lunbotu'>
+        <!-- 滑动菜单 start
+          autoplay        是否自动切换
+          indicator-dots  是否显示指示点
+          circular        是否采用衔接滑动
+          interval        自动切换时间间隔
+          duration        滑动动画时长
+          vertical        滑动方向是否为纵向
+         -->
+        <swiper class='swiper'  autoplay="true" indicator-dots="true" circular="true"  duration="1000">
+          <block wx:for="{{arrimg}}" wx:key="*this">
+            <swiper-item>
+              <image class='swiper_img' mode="aspectFill" src='{{getImg+item}}' />
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <view class='view_new'>
+      <view class='new_shangping'>
+        <view class='shangping' >
+          <view class='new_title'>{{commodity.title}}</view>
+          <view class='new_laiyuan'>商品来源: {{commodity.distributorName}}</view>
+          <view class='new_price'>{{commodity.price}} 元/瓶</view>
+          <view class='new_img'>
+            <image mode="widthFix" class='new_img' src='{{getImg+commodity.infoImgUrl}}' />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='page_view'>
+    <view class='view_bottom' bindtap='bindtapSohuo' id='{{commodity.id}}'>送货上门</view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-23
+ *   描述:  经销商后台
+ * 
+ * */-->
+<view class='page'>
+  <!-- 状态 start -->
+  <view class='page_view'>
+    <view class='view_state'>
+      <view class='state_1 {{state == 1 ? "hover":""}}' id='1' bindtap='bindtapSetState'>未上架</view>
+      <view class='state_0 {{state == 0 ? "hover":""}}' id='0' bindtap='bindtapSetState'>已上架</view>
+    </view>
+  </view>
+  <!-- 状态 end -->
+
+  <!-- 未上架模块 start -->
+  <view class='page_view' wx:if="{{state == 1}}">
+    <view class='view_model' wx:for="{{list}}" wx:key="*this">
+      <view class='model_img' id='{{item.id}}'><image class="img" src='{{getImg + item.infoImgUrl}}'></image></view>
+      <view class='model_text'>
+        <view class='text_title'>{{item.title}}</view>
+        <view class='text_prices'>{{item.price}} 元/瓶</view>
+      </view>
+      <view class='model_btn'>
+        <view class='btn_delete' bindtap='updateState' data-ste='0' id="{{item.id}}">上架</view>
+      </view>
+    </view>
+  </view>
+  <!-- 未上架模块 end -->
+
+  <!-- 已上架模块 start -->
+  <view class='page_view' wx:elif="{{state == 0}}">
+    <view class='view_model' wx:for="{{list}}" wx:key="*this">
+      <view class='model_img' id='{{item.id}}'><image class="img" src='{{getImg + item.infoImgUrl}}'></image></view>
+      <view class='model_text'>
+        <view class='text_title'>{{item.title}}</view>
+        <view class='text_prices'>{{item.price}} 元/瓶</view>
+      </view>
+      <view class='model_btn'>
+        <view class='btn_delete' bindtap='updateState'  data-ste='1' id="{{item.id}}">下架</view>
+      </view>
+    </view>
+  </view>
+  <!-- 已上架模块 end -->
+</view>

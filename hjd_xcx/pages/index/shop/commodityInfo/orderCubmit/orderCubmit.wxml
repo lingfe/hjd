@@ -1,0 +1,49 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-25
+ *   描述:  商品订单提交
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_top'>订购商品为货到付款</view>
+
+  <view class='page_view'>
+    <view class='new_title'>{{commodity.title}}</view>
+    <view class='new_laiyuan'>商品来源: {{commodity.distributorName}}</view>
+    <view class='new_input'>
+      <view class='input_name'>收货地址</view>
+      <view class='input_input'><input bindinput='inputAddress' placeholder='请输入地址'></input></view>
+    </view>
+    <view class='new_input'>
+      <view class='input_name'>商品数量</view>
+      <view class='jian j' bindtap='bindtapjian'>-</view>
+      <view class='num'>{{form.number}}</view>
+      <view class='jia j' bindtap='bindtapjia'>+</view>
+    </view>
+    <view class='new_input'>
+      <view class='input_name'>联系电话</view>
+      <view class='input_input'><input bindinput='inputPhone' placeholder='请输入联系电话'></input></view>
+    </view>
+    <view class='new_input'>
+      <view class='input_name'>配送时间</view>
+      <view class='input_input'>
+        <picker class='input_other'  
+        mode="date" 
+        value="{{date}}" 
+        start="{{startTime}}" 
+        end="2018-09-01" bindchange="inputCdate">
+          <input disabled='false' type='text' placeholder='请输入配送时间' value='{{form.distributionTime}}'/>
+        </picker>
+      </view>
+    </view>
+    <view class='new_input'>
+      <view class='input_name'>备注</view>
+      <view class='input_input'><input bindinput='inputRemark' placeholder='请输入备注(选填)'></input></view>
+    </view>
+  </view>
+</view>
+
+<view class='view_bottom'>
+  <view class='bottom_price'>￥ {{form.number * commodity.price}}</view>
+  <view class='bottom_right' bindtap='submitOrder'>提交</view>
+</view>

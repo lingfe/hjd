@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*【重定义浏览器默认样式】*/
+body{
+	background-color:#ddd;
+	margin: 0px;
+	padding:0px;
+}
+.page{
+	width:100%;
+	height:100%;
+  background-color:#ddd;
+}
+
+/*【重定义浏览器默认样式】end*/
+
+
+/*【头部组件】 start*/
+.header{
+	width:100%;
+	height:40px;
+	background-color:#000;
+	color:#fff;
+	text-align: center;
+	font-size:10px;
+	line-height:40px;
+}
+
+
+/*底部菜单*/
+.dibu{
+  width:100%;
+  height:50px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  background-color: #fff;
+}
+.dibu_model{
+  width:28%;
+  height:50px;
+  margin-left: 3.5%;
+  float:left;
+}
+.model_img{
+  width:100%;
+  height:25px;
+  margin-top:4px;
+}
+.img{
+  width:33%;
+  height:25px;
+  margin-left: 33%;
+}
+.model_text{
+  width:100%;
+  height:20px;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: center;
+}

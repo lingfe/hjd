@@ -1,0 +1,114 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  我的
+ * 
+ * */
+ page{
+   background-color: #ddd;
+ }
+ .page{
+   height: 100%;
+   width: 100%;
+ }
+ .page_view{
+   width: 100%;
+ }
+ .view_top{
+   width: 100%;
+   height: 220rpx;
+   background-color: #fff;
+   padding-top: 50rpx;
+ }
+ .top_img{
+   width: 20%;
+   height: 150rpx;
+   margin: auto;
+ }
+ .img{
+    width: 100%;
+   height: 150rpx;
+   border-radius: 100rpx;
+ }
+ .top_username{
+   font-size: 30rpx;
+   text-align: center;
+   padding-top:10rpx; 
+   width: 100%;
+   color: #000;
+ }
+
+ /*菜单部分*/
+ .view_caidang{
+   margin-top: 20rpx;
+   padding-top: 20rpx;
+   padding-bottom: 20rpx;
+   width: 100%;
+   background-color: #fff;
+ }
+ .caidang_view{
+   width: 100%;
+   height:100rpx;
+   background-color: #fff;
+ }
+ .view_content{
+   width: 90%;
+   margin: auto;
+   text-align: left;
+   font-size: 30rpx;
+   padding-top: 10rpx;
+   height: 70rpx;
+   line-height: 70rpx;
+   border-bottom: 1rpx solid #ddd;
+ }
+ .last{
+   border-bottom: 1rpx solid #fff;
+ }
+ 
+ /*经销商后台*/
+ .wxh{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: rgba(0, 0, 0,0.7);
+   top: 0rpx;
+ }
+ .wxh_view{
+   width: 60%;
+   height: 200rpx;
+   position: fixed;
+   background-color: #fff;
+   top: 200rpx;
+   margin-left: 22%;
+   border-radius: 10rpx;
+  padding-bottom: 10rpx;
+ }
+ .view_title{
+   width: 100%;
+   text-align: center;
+   padding-top: 20rpx;
+   font-size: 30rpx;
+ }
+ .view_input{
+   width: 54%;
+   margin: auto;
+ }
+ .input{
+   padding-top: 20rpx;
+   font-size: 26rpx;
+ }
+.view_btn{
+  width: 30%;
+  margin: auto;
+  background-color: #000;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+}
+.view_btn:active{
+  opacity: 0.7;
+}

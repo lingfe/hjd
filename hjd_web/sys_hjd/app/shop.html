@@ -1,0 +1,64 @@
+
+<!DOCTYPE>
+<html>
+  <head>
+
+    
+    <title>选店</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">    
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop.css"/>
+    </head>
+    
+    <body ng-app="myApp" ng-controller="shop">
+        <div class="page">
+            <!-- 头部 start -->
+            <header class="header"><h1>选店</h1></header>
+            <!-- 头部 end -->
+
+            <!-- 搜索栏 start -->
+            <div class="search">
+                <img class="form_img"  src="images/icon/phone.png" />
+                <input class="form_input" ng-model="searchStr" ng-change="changeSearch()" type="text" placeholder="搜索" />
+            </div>
+            <!-- 搜索栏 end -->
+            
+          <div class='page_view'>
+            <div class='view_tuijinShop'>
+              <div class='tuijinShop_title'>推荐商店</div>
+              <div class='tuijinShop_view' ng-click='bindtapShopinfo(list[0].id,list[0].distributorName)' >
+                <div class='view_title'>{{list[0].distributorName !=null ?list[0].distributorName:'无'}}</div>
+                <div class='view_border'></div>
+              </div>
+            </div>
+            <div class='view_otherShop'>
+              <div class='otherShop_title'>其他商店</div>
+              <div class='otherShop_view' 
+              ng-click='bindtapShopinfo(list[0].id,list[0].distributorName)' 
+              ng-repeat=" item in list" ng-show="{{index != 0}}">
+                <div class='view_title'>{{item.distributorName}}</div>
+                <div class='view_border'></div>
+              </div>
+              <div class='otherShop_view' ng-show="{{list[1] == null}}">
+                <div class='view_title'>无</div>
+                <div class='view_border'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script type="text/javascript" src="js/shop.js" ></script>
+        
+    </body>
+</html>

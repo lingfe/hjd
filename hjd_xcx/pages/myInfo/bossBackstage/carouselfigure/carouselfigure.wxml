@@ -1,0 +1,25 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-21
+ *   描述:  首页轮播图管理
+ * 
+ * */-->
+
+<view class='page'>
+  <view class='page_view'>
+    <!-- 首页轮播图 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>首页轮播图</view>
+      </view>
+      <view class='form_img'>
+        <view class="img_not" bindtap="chooseImage">+</view>
+        <view wx:for="{{files}}" wx:key="*this" class="item_img" bindlongtap="previewImage" id="{{item.imgUrl}}">
+          <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" id="{{item.id}}" />
+          <image class="img" src="{{item.imgUrl}}" mode="aspectFill" />
+        </view>
+      </view>
+    </view>
+    <!-- 首页轮播图 end -->
+  </view>
+</view>

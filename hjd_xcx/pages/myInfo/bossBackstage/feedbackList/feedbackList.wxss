@@ -1,0 +1,65 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-23
+ *   描述:  投诉建议管理
+ * 
+ * */
+  page{
+   background-color: #aaa;
+ }
+ .page{
+   width: 100%;
+  height: 100%;   
+}
+.page_view{
+  width: 100%;
+  padding-top: 20rpx;
+}
+.view_model{
+  width: 100%;
+  height: 136rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+}
+.model_content{
+  width: 76%;
+  text-align: center;
+  color: #000;
+  max-height: 126rpx;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  float: left;
+  overflow: hidden; /**自动隐藏文字*/
+  text-overflow: ellipsis; /**文字隐藏后添加省略号*/
+}
+.model_btn{
+  width: 20%;
+  float: left;
+  margin-left: 10rpx;
+}
+.btn_update{
+  width:90%;
+  height:50rpx;
+  text-align:center;
+  line-height:50rpx;
+  font-size:26rpx;
+  border:1rpx solid #aaa;
+
+}
+.btn_update:active{
+  background-color: #ddd;
+}
+.btn_delete{
+  width:90%;
+  height:50rpx;
+  margin-top:10rpx;
+  text-align:center;
+  line-height:50rpx;
+  font-size:26rpx;
+  border:1rpx solid #aaa;
+
+}
+.btn_delete:active{
+  background-color: #ddd;
+}

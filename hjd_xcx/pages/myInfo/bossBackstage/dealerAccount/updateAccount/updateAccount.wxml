@@ -1,0 +1,37 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-21
+ *   描述:  经销商账号管理——修改
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <!-- 商店名称 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>商店名称</view>
+        <view class='Commodity_input'>
+          <input class='input' value='{{form.distributorName}}' bindinput='inputName' placeholder='请输入商店名称'></input>
+        </view>
+      </view>
+    </view>
+    <!-- 商店名称 end -->
+
+    <!-- 店主微信号 start -->
+    <view class='view_form'>
+      <view class='form_Commodity'>
+        <view class='Commodity_name'>微信号</view>
+        <view class='Commodity_input input_prices'>
+          <input class='input' value='{{form.pwd}}' bindinput='inputPwd' placeholder='请输入微信号'></input>
+        </view>
+      </view>
+    </view>
+    <!-- 店主微信号 end -->
+  </view>
+
+  <!-- 修改按钮 start -->
+  <view class='form_btn'>
+    <view class='btn_submit' bindtap='updateDistributor'>修改账号</view>
+  </view>
+  <!-- 修改按钮 end -->
+</view>

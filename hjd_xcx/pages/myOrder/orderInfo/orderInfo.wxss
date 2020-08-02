@@ -1,0 +1,95 @@
+
+ page{
+   background-color: #ddd;
+ }
+ .page{
+   width: 100%;
+   height: auto;
+   padding-top: 50rpx;
+ }
+ .page_top{
+   width: 96%;
+   height: 150rpx;
+   line-height: 150rpx;
+   background-color: #000;
+   text-align: center;
+   color: #fff;
+   margin: auto;
+ }
+ .page_view{
+    width: 96%;
+    margin: auto;
+    margin-top: 50rpx;
+    background-color: #fff;
+    padding-left: 10rpx;
+    padding-top: 60rpx;
+    padding-bottom: 100rpx;
+ }
+ .new_title{
+  font-size: 50rpx;
+  width: 100%;
+  text-align: left;
+  padding-top: 10rpx;
+  margin-left: 30rpx;
+}
+.new_laiyuan{
+  width: 100%;
+  font-size: 26rpx;
+  padding-top: 10rpx;
+  color: #666;
+  margin-left: 30rpx;
+  padding-bottom: 20rpx;
+}
+.new_input{
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+  height: 50rpx;
+}
+.input_name{
+  width: 30%;
+  line-height: 50rpx;
+  height: 50rpx;
+  color: #666;
+  font-size: 30rpx;
+  float: left;
+}
+.input_input{
+  width: 60%;
+  float: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+/*数量*/
+.jian{
+  float: left;
+  width:50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1rpx #666 solid;
+  margin-right: 20rpx;
+}
+.num{
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+.jia{
+  float: left;
+  width:50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1rpx #666 solid;
+  margin-right: 20rpx;
+}
+
+.j:active{
+  opacity: 0.7;
+}

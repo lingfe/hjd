@@ -1,0 +1,41 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-14
+ *   描述:  首页
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <view class='view_lunbotu'>
+        <!-- 滑动菜单 start
+          autoplay        是否自动切换
+          indicator-dots  是否显示指示点
+          circular        是否采用衔接滑动
+          interval        自动切换时间间隔
+          duration        滑动动画时长
+          vertical        滑动方向是否为纵向
+         -->
+        <swiper class='swiper'  autoplay="true" indicator-dots="true" circular="true"  duration="1000">
+          <swiper-item wx:for="{{list}}" wx:key="*this">
+            <image class='swiper_img' bindtap='bindtapNvaito' id='{{shoplist[index].id}}' mode="aspectFill" src='{{item.imgUrl}}' />
+          </swiper-item>
+        </swiper>
+    </view>
+    <view class='view_btn'>
+      <button class='btn' bindtap='bindtap_order'>下单</button>
+    </view>
+    <view class='view_new'>
+      <view class='title'>最新商品></view>
+      <view class='new_shangping'>
+        <view class='shangping'  wx:for="{{shoplist}}" wx:key="*this">
+          <view class='new_img'>
+            <image bindtap='bindtapNvaito' id='{{item.id}}' mode="aspectFill" class='new_img' src='{{getImg+item.infoImgUrl}}' />
+          </view>
+          <view class='new_title'>{{item.title}}</view>
+          <view class='new_laiyuan'>商品来源: {{item.distributorName}}</view>
+          <view class='new_price'>{{item.price}} 元/瓶</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

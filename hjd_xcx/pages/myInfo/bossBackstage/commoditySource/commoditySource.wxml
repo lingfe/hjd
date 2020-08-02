@@ -1,0 +1,24 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  商品源
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_view'>
+    <view class='view_model' wx:for="{{list}}" wx:key="*this">
+      <view class='model_img' id='{{item.id}}'><image class="img" src='{{getImg + item.infoImgUrl}}'></image></view>
+      <view class='model_text'>
+        <view class='text_title'>{{item.title}}</view>
+        <view class='text_prices'>{{item.price}} 元/瓶</view>
+      </view>
+      <view class='model_btn'>
+        <view class='btn_update' bindtap='btn_update' id="{{item.id}}">修改</view>
+        <view class='btn_delete' bindtap='btn_delete' id="{{item.id}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <!-- add -->
+  <view class='add' bindtap='bindtapAdd'>add</view>
+</view>
+

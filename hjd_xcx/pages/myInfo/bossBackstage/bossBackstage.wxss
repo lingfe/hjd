@@ -1,0 +1,39 @@
+/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  老板后台
+ * 
+ * */
+ page{
+   background-color: #ddd;
+ }
+ .page{
+   width: 100%;
+   height: 100%;
+ }
+
+ .page_view{
+   width: 100%;
+ }
+ .view_model{
+   width: 28%;
+   float: left;
+   margin-left: 60rpx;
+   height: 240rpx;   
+   font-size: 48rpx;
+   margin-top: 50rpx;
+   background-color: #fff;
+   box-shadow: 0rpx 3rpx 5rpx #fff;
+   padding:40rpx;
+   text-align: center;
+ }
+  .span{
+    width: 90%;
+    margin: auto;
+    margin-top: 70rpx;
+    text-align: left;
+ }
+ .view_model:active{
+   background-color: #ddd;
+   color: #fff;
+ }

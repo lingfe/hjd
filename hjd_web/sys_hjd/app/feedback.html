@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+  <head>
+
+    
+    <title>投诉建议</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">    
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/feedback.css"/>
+    </head>
+    <body>
+        <div class='page'  ng-app="myApp" ng-controller="feedback">
+          <div class='page_view'> 
+            <!-- 头部 start -->
+            <header class="header"><h1>投诉建议</h1></header>
+            <!-- 头部 end -->
+
+              <!-- 投诉建议   start-->
+              <div class="report">
+                    <div class="title"><text style="color:red;">*</text>投诉建议</div> 
+
+                    <div class="info">
+                      <textarea auto-focus="true" ng-model="content" ng-change="textchange()"
+                      placeholder="请输入.." 
+                      maxlength="501" class="text" ></textarea>
+                    </div>
+
+                    <div class="title">
+                      <text style="color:#000;float:right;">{{num}}/500</text>
+                    </div>
+              </div>
+              <!-- 投诉建议   end-->
+
+              <!-- 确定   start-->
+              <div class="form_btn">
+                <button type="button" ng-click="submitBtn()" class="btn">提交</button>
+              </div>
+              <!-- 确定   start-->
+          </div>
+        </div>
+
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script type="text/javascript" src="js/feedback.js" ></script>
+    <body>
+</html>

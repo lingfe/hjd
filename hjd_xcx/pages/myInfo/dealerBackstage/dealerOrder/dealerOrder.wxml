@@ -1,0 +1,32 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-26
+ *   描述:  经销商商品订单
+ * 
+ * */-->
+<view class="page">
+  <view class='page_view'>
+    <view class='view_model' wx:for="{{list}}" wx:key="*this">
+      <view  bindtap='naviterOrderInfo' id="{{index}}">
+        <view class='model_img' id='{{item.id}}'><image class="img" src='{{getImg + item.imgUrl}}'></image></view>
+        <view class='model_text'>
+          <view class='text_title'>{{item.title}}</view>
+          <view class='text_laiyuan'>商品来源: {{item.distributorName}}</view>
+          <view class='text_prices'><span style="font-size:30rpx;">{{item.price}}</span> x{{item.number}}</view>
+        </view>
+        <view class='model_state'>
+          <view wx:if="{{item.state == 0}}">未发货</view>
+          <view wx:elif="{{item.state == 1}}">未确认</view>
+          <view wx:elif="{{item.state == 2}}">交易结束</view>
+          <view wx:elif="{{item.state == 3}}">已取消</view>
+        </view>
+      </view>
+      <view class='model_btn'>
+        <view class='bin_content'>支付金额：{{item.price * item.number}}元</view>
+        <view class='btn state_2' wx:if="{{item.state == 0}}" bindtap='setState' data-state='3' id="{{item.id}}">取 消</view>
+        <view class='btn state_0' wx:if="{{item.state == 0}}" bindtap='setState' data-state='1' id="{{item.id}}">发 货</view>
+        <view class='btn state_2' wx:elif="{{item.state == 2}}" bindtap='bindtapNvaito' id="{{item.shopInfoid}}">查看商品</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/shangpin/shangpin",
+    "pages/index/shop/shop",
+    "pages/myInfo/myInfo",
+    "pages/myInfo/bossBackstage/bossBackstage",
+    "pages/myInfo/bossBackstage/commoditySource/commoditySource",
+    "pages/myInfo/bossBackstage/commoditySource/addCommodity/addCommodity",
+    "pages/myInfo/bossBackstage/commoditySource/updateCommodity/updateCommodity",
+    "pages/myInfo/bossBackstage/dealerAccount/dealerAccount",
+    "pages/myInfo/bossBackstage/dealerAccount/addAccount/addAccount",
+    "pages/myInfo/bossBackstage/dealerAccount/updateAccount/updateAccount",
+    "pages/myInfo/bossBackstage/carouselfigure/carouselfigure",
+    "pages/myInfo/feedback/feedback",
+    "pages/myInfo/bossBackstage/feedbackList/feedbackList",
+    "pages/myInfo/dealerBackstage/dealerBackstage",
+    "pages/myInfo/dealerBackstage/dealerShopInfo/dealerShopInfo",
+    "pages/index/shop/shopInfo/shopInfo",
+    "pages/index/shop/commodityInfo/commodityInfo",
+    "pages/index/shop/commodityInfo/orderCubmit/orderCubmit",
+    "pages/myOrder/myOrder",
+    "pages/myInfo/dealerBackstage/dealerOrder/dealerOrder",
+    "pages/myInfo/bossBackstage/salesData/salesData",
+    "pages/myOrder/orderInfo/orderInfo"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "搭伙团队",
+    "navigationBarBackgroundColor": "#000",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#C4C4C4",
+    "backgroundColor": "#fff",
+    "selectedColor": "#5E7E88",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/index0.png",
+        "selectedIconPath": "assets/images/index1.png"
+      },
+      {
+        "pagePath": "pages/myOrder/myOrder",
+        "text": "订单",
+        "iconPath": "assets/images/find0.png",
+        "selectedIconPath": "assets/images/find1.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
+        "iconPath": "assets/images/my0.png",
+        "selectedIconPath": "assets/images/my1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 100000,
+    "connectSocket": 10000,
+    "uploadFile": 150000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

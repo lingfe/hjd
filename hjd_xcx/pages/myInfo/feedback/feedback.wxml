@@ -1,0 +1,32 @@
+<!--pages/message/search/feedback/feedback.wxml-->
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12.23
+ *   描述:  投诉建议
+ * 
+ * */-->
+<view class="page">
+  <!-- 投诉建议   start-->
+  <view class="report">
+    <view class="title">
+      <text style="color:red;">*</text>投诉建议</view>
+    <view class="info">
+      <textarea auto-focus="true" 
+      name="content"
+      value="{{content}}"
+      bindinput="dataChange"
+      placeholder="请输入.." 
+      maxlength="501" class="text" />
+    </view>
+    <view class="title">
+      <text style="color:#000;float:right;">{{num}}/500</text>
+    </view>
+  </view>
+  <!-- 投诉建议   end-->
+
+  <!-- 确定   start-->
+  <view class="weui-btn-area" bindtap="savebindtapfeedback">
+    <button class="weui-btn" type="primary" bindtap="showTopTips">提交</button>
+  </view>
+  <!-- 确定   start-->
+</view>

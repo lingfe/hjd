@@ -1,0 +1,29 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-21
+ *   描述:  经销商账号管理
+ * 
+ * */-->
+ <view class='page'>
+  <view class='page_view'>
+    <view class='view_title'>
+      <view class='title_item'>店名</view>
+      <view class='title_item'>微信号</view>
+      <view class='title_item'>操作</view>
+    </view>
+    <view class='view_item' wx:for="{{list}}" wx:key="*this">
+      <view class='item_item'>{{item.distributorName}}</view>
+      <view class='item_item'>{{item.pwd}}</view>
+      <view class='item_item'>
+        <button class='btn' bindtap='updateAccount' id="{{item.pwd}}">修改</button>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 添加按钮 start -->
+  <view class='form_btn'>
+    <view class='btn_submit' bindtap='addAccount'>添加账号</view>
+  </view>
+  <!-- 添加按钮 end -->
+ </view>

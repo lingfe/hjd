@@ -1,0 +1,48 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" 
+                    class="weui-search-bar__input" 
+                    placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+    </view>
+
+  <view class='page_view'>
+    <view class='view_model' wx:for="{{list}}" wx:key="*this" >
+      <view bindtap='naviterOrderInfo' id="{{index}}">
+        <view class='model_img' id='{{item.id}}'><image class="img" src='{{getImg + item.imgUrl}}'></image></view>
+        <view class='model_text'>
+          <view class='text_title'>{{item.title}}</view>
+          <view class='text_laiyuan'>商品来源: {{item.distributorName}}</view>
+          <view class='text_prices'><span style="font-size:30rpx;">{{item.price}}</span> x{{item.number}}</view>
+        </view>
+        <view class='model_state'>
+          <view wx:if="{{item.state == 0}}">已提交</view>
+          <view wx:elif="{{item.state == 1}}">已发货</view>
+          <view wx:elif="{{item.state == 2}}">交易成功</view>
+          <view wx:elif="{{item.state == 3}}">已取消</view>
+        </view>
+      </view>
+      <view class='model_btn'>
+        <view class='bin_content'>支付金额：{{item.price * item.number}}元</view>
+        <view class='btn state_0' wx:if="{{item.state == 0}}" data-state='3' bindtap='setState' id="{{item.id}}">取消订单</view>
+        <view class='btn state_1' wx:elif="{{item.state == 1}}" data-state='2' bindtap='setState' id="{{item.id}}">确认收货</view>
+        <view class='btn state_2' wx:elif="{{item.state == 2}}" bindtap='bindtapSohuo' id="{{item.shopInfoid}}">再次购买</view>
+      </view>
+    </view>
+  </view>
+</view>

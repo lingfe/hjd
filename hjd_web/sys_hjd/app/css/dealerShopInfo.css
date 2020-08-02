@@ -1,0 +1,130 @@
+
+ .page{
+   width: 100%;
+  height: 100%;   
+}
+.page_view{
+  width: 100%;
+  padding-top: 10px;
+}
+/*状态*/
+.view_state{
+  width: 32%;
+  margin: auto;
+  height: 30px;
+}
+.state_1{
+  width: 50%;
+  text-align: center;
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  float: left;
+  background-color: #fff;
+}
+.hover{
+  opacity: 0.7;
+  color: blue;
+}
+.state_0{
+    width: 50%;
+  text-align: center;
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  float: left;
+  background-color: #fff;
+}
+.state_0:hover{
+  opacity: 0.7;
+  color: blue;
+}
+
+/*商品*/
+.view_model{
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+.model_img{
+  width: 22%;
+  height: 80px;
+    float: left;
+    margin-left: 5px;
+}
+.model_img img{
+    width: 100%;
+  height: 80px;
+}
+.model_text{
+  width: 54%;
+  margin-left: 5px;
+  float: left;
+}
+.text_title{
+  font-size: 22px;
+  height: 30px;
+  line-height: 30px;
+}
+.text_prices{
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
+  color: red;
+}
+.model_btn{
+  width: 20%;
+  float: left;
+  margin-left: 5px;
+}
+.btn_update{
+  width:90%;
+  height:30px;
+  text-align:center;
+  line-height:30px;
+  font-size:15px;
+  border:1px solid #aaa;
+
+}
+.btn_update:active{
+  background-color: #ddd;
+}
+.btn_delete{
+  width:90%;
+  height:30px;
+  margin-top:10px;
+  text-align:center;
+  line-height:30px;
+  font-size:15px;
+  border:1px solid #aaa;
+
+}
+.btn_delete:active{
+  background-color: #ddd;
+}
+
+/*添加*/
+.add{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color:#aaa;
+  border-radius: 50px;
+  box-shadow: 0px 3px 5px #fff; 
+  position: fixed;
+  right: 7px;
+  bottom: 50px;
+}
+.add:active{
+  opacity: 0.7;
+}
+
+.true{
+    display:block;
+}
+.false{
+    display:none;
+}

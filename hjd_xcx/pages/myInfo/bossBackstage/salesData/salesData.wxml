@@ -1,0 +1,49 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-26
+ *   描述:  销售数据
+ * 
+ * */-->
+<view class='page'>
+  <view class='page_top'>
+    <view class='top_model'>
+      <picker range="{{dealerStr}}" bindchange="bindDistributorName" value="{{index}}" custom-item="{{customItem}}">
+          店铺
+      </picker>
+    </view>
+    <view class='top_model' style='width:39%;border-left:1rpx solid #aaa;border-right:1rpx solid #aaa;'>
+      <picker range="{{stateStr}}" bindchange="bindPickerState" value="{{index}}" custom-item="{{customItem}}">
+          状态
+      </picker>
+    </view>
+    <view class='top_model'>
+      <picker mode="date" 
+        value="{{date}}" 
+        start="{{startTime}}" 
+        end="2018-09-01" bindchange="bindPickerChange">
+          时间
+        </picker>
+    </view>
+  </view>
+
+  <view class='page_top_to' wx:for="{{list}}" wx:key="*this" style='margin-top:20rpx;'>
+    <view class='top_model_to'>
+      <view class='model_title'>{{item.distributorName}}</view>
+      <view class='model_time'>{{item.distributionTime}}</view>
+    </view>
+    <view class='top_model_to' style='width:39%;'>
+      <view class='model_title'>{{item.title}}</view>
+      <view class='model_prices'>X{{item.number}} = <span style="font-size:30rpx;color:red;">{{item.number * item.price}}元</span></view>
+    </view>
+    <view class='top_model_to' style='line-height:160rpx;'>
+      <view wx:if="{{item.state == 0}}">未发货</view>
+      <view wx:elif="{{item.state == 1}}">未确认</view>
+      <view wx:elif="{{item.state == 2}}">已结束</view>
+      <view wx:elif="{{item.state == 3}}">已取消</view>
+    </view>
+  </view>
+
+  <view class='page_view'>
+    <view class='view_bottom' bindtap='bindtapSohuo' id='{{commodity.id}}'>合计: 236元</view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+ .page_view{
+   width: 100%;
+ }
+ .view_top{
+   width: 100%;
+   height: 110px;
+   background-color: #fff;
+   padding-top: 25px;
+ }
+ .top_img{
+   width: 20%;
+   height: 75px;
+   margin: auto;
+ }
+ .top_img img{
+    width: 100%;
+   height: 75px;
+   border-radius: 50px;
+ }
+ .top_username{
+   font-size: 15px;
+   text-align: center;
+   padding-top:5px; 
+   width: 100%;
+   color: #000;
+ }
+
+ /*菜单部分*/
+ .view_caidang{
+   margin-top: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: 100%;
+   background-color: #fff;
+ }
+ .caidang_view{
+   width: 100%;
+   height:50px;
+   background-color: #fff;
+ }
+ .view_content{
+   width: 90%;
+   margin: auto;
+   text-align: left;
+   font-size: 15px;
+   padding-top: 5px;
+   height: 35px;
+   line-height: 35px;
+   border-bottom: 1px solid #ddd;
+ }
+ .last{
+   border-bottom: 1px solid #fff;
+ }
+ 
+ /*经销商后台*/
+ .wxh{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: rgba(0, 0, 0,0.7);
+   top: 0px;
+ }
+ .wxh_view{
+   width: 60%;
+   height: 100px;
+   position: fixed;
+   background-color: #fff;
+   top: 100px;
+   margin-left: 22%;
+   border-radius: 5px;
+  padding-bottom: 5px;
+ }
+ .view_title{
+   width: 100%;
+   text-align: center;
+   padding-top: 10px;
+   font-size: 10px;
+ }
+ .view_input{
+   width: 54%;
+   margin: auto;
+ }
+ .input{
+   padding-top: 10px;
+   font-size: 10px;
+ }
+.view_btn{
+  width: 30%;
+  margin: auto;
+  background-color: #000;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 13px;
+  border-radius: 5px;
+}
+.view_btn:active{
+  opacity: 0.7;
+}
+
+.false{
+    display: none;
+}
+.true{
+    display:block;
+}

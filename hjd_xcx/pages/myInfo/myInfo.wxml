@@ -1,0 +1,42 @@
+<!--/**  
+ *   作者:  lingfe 
+ *   时间:  2017-12-19
+ *   描述:  我的
+ * 
+ * */-->
+ <view class='page'>
+  <view class='page_view'>
+    <view class='view_top'>
+      <view class='top_img'>
+        <image class='img' src='{{user.avatarUrl}}'></image>
+      </view>
+      <view class='top_username'>{{user.username}}</view>
+    </view>
+    <view class='view_caidang'>
+      <view class='caidang_view' bindtap='bindtapBossBackstage' wx:if="{{user.state == 1}}">
+        <view class='view_content'>进入后台</view>
+      </view>
+      <view class='caidang_view' bindtap='dealerBackstage' wx:if="{{user.state == 1}}">
+        <view class='view_content'>经销商后台</view>
+      </view>
+      <view class='caidang_view' bindtap='dealerBackstage' wx:if="{{user.state == 2}}">
+        <view class='view_content'>经销商后台</view>
+      </view>
+      <view class='caidang_view' bindtap='feedback'>
+        <view class='view_content last'>投诉建议</view>
+      </view>
+    </view>
+  </view>
+ </view>
+
+   <!-- 输入经销商微信号 start-->
+  <view class='wxh' bindtap='dealerBackstage' wx:if="{{dealer}}">
+    <view class='wxh_view' catchtap="dddd">
+      <view class='view_title'>输入微信号</view>
+      <view class="view_input">
+        <input class='input' bindinput='inputWxh' placeholder='请输入经销商微信号'></input>
+      </view>
+      <view class='view_btn' catchtap='logindealerBackstage'>确定</view>
+    </view>
+  </view>
+  <!-- 输入经销商微信号 end-->

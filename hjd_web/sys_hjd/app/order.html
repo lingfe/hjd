@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+    <head>
+    <title>订单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">    
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/order.css"/>
+
+    </head>
+    <body>
+        <div class='page'  ng-app="myApp" ng-controller="order">
+          <div class='page_view'> 
+            <!-- 头部 start -->
+            <header class="header"><h1>订单</h1></header>
+            <!-- 头部 end -->
+            
+            <!-- 搜索栏 start -->
+            <div class="search">
+                <img class="form_img"  src="images/icon/phone.png" />
+                <input class="form_input" ng-model="searchStr" ng-change="changeSearch()" type="text" placeholder="搜索" />
+            </div>
+            <!-- 搜索栏 end -->
+
+          <!-- 订单信息 start -->
+            <div class='view_order' ng-repeat="item in orderList">
+              <div class='order_img' id='{{item.id}}'>
+                <image  src='{{getImg + item.imgUrl}}'></image></div>
+              <div class='order_text'>
+                <div class='text_title'>{{item.title}}</div>
+                <div class='text_laiyuan'>商品来源: {{item.distributorName}}</div>
+                <div class='text_prices'><span style="font-size:30rpx;">{{item.price}}</span> x{{item.number}}</div>
+              </div>
+              <div class='order_state'>
+                <div ng-show="{{item.state == 0}}">已提交</div>
+                <div ng-show="{{item.state == 1}}">已发货</div>
+                <div ng-show="{{item.state == 2}}">交易成功</div>
+                <div ng-show="{{item.state == 3}}">已取消</div>
+              </div>
+              <div class='order_btn'>
+                <div class='bin_content'>支付金额：{{item.price * item.number}}元</div>
+                <div class='btn state_0' ng-show="{{item.state == 0}}" data-state='3' bindtap='setState' id="{{item.id}}">取消订单</div>
+                <div class='btn state_1' ng-show="{{item.state == 1}}" data-state='2' bindtap='setState' id="{{item.id}}">确认收货</div>
+                <div class='btn state_2' ng-show="{{item.state == 2}}" bindtap='bindtapSohuo' id="{{item.shopInfoid}}">再次购买</div>
+              </div>
+            </div>
+          <!-- 订单信息 end -->
+          </div>
+
+          <!-- 菜单 start -->
+          <div class="dibu">
+            <div class="dibu_model">
+              <div class="model_img">
+                <a href="index.html?user={{user}}"><image class="img" src="images/index0.png"/></a>
+              </div>
+              <div class="model_text">首页</div>
+            </div>
+
+            <div class="dibu_model">
+              <div class="model_img">
+                <image class="img" src="images/find1.png"/>
+              </div>
+              <div class="model_text">订单</div>
+            </div>
+
+            <div class="dibu_model">
+              <div class="model_img">
+                <a href="myInfo.html?user={{user}}"><image class="img" src="images/my0.png"/></a>
+              </div>
+              <div class="model_text">我的</div>
+            </div>
+          </div>
+          <!-- 菜单 end -->
+          
+        </div>
+
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script type="text/javascript" src="js/order.js" ></script>
+    <body>
+</html>

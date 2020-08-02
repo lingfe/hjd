@@ -1,0 +1,93 @@
+
+.page_view{
+  width: 100%;
+}
+.view_div{
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+.div_img{
+  width: 22%;
+  height: 80px;
+    float: left;
+    margin-left: 5px;
+} 
+.div_img img{
+    width: 100%;
+  height: 80px;
+}
+.div_text{
+  width: 52%;
+  margin-left: 10px;
+  float: left;
+}
+.text_title{
+  font-size: 22px;
+  height: 30px;
+  line-height: 30px;
+}
+.text_laiyuan{
+  font-size: 13px;
+  color: #ccc;
+  height: 30px;
+  line-height: 30px;
+}
+.text_prices{
+  font-size: 13px;
+  line-height: 25px;
+  height: 25px;
+  color: red;
+}
+.div_state{
+    width: 20%;
+  float: left;
+  margin-left: 5px;
+  font-size: 15px;
+  height: 80px;
+  line-height: 80px;
+  color: #ccc;
+}
+.div_btn{
+  width: 96%;
+  border-top: 1px #ddd solid;
+  margin: auto;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  float: left;
+  height: 40px;
+}
+.bin_content{
+  float: left;
+  line-height: 40px;
+  padding-left: 5px;
+  font-size: 15px;
+}
+.btn{
+width:20%;
+height:30px;
+text-align:center;
+line-height:30px;
+font-size:15px;
+border:1px solid #aaa;
+float:right;
+margin-right: 5px;
+border-radius: 5px;
+color: #fff;
+font-weight: bold;
+}
+.state_0{
+  background-color: #000033;
+}
+.state_1{
+  background-color: red;
+}
+.state_2{
+  color: #ddd;
+}
+.btn:active{
+  opacity: 0.7;
+}

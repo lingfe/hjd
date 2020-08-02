@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html>
+    <head>
+    <title>我的</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">    
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/myInfo.css"/>
+
+    </head>
+    <body ng-app="myApp" ng-controller="myInfo">
+        <div class='page'  >
+          <div class='page_view'> 
+            <!-- 头部 start -->
+            <header class="header"><h1>我的</h1></header>
+            <!-- 头部 end -->
+  
+            <!-- 信息 start -->
+            <div class='view_top'>
+              <div class='top_img'>
+                <img src='{{user.avatarUrl}}'></img>
+              </div>
+              <div class='top_username'>{{user.username}}</div>
+            </div>
+            <div class='view_caidang'>
+              <div class='caidang_view' bindtap='bindtapBossBackstage()' ng-show="{{user.state == 1}}">
+                <div class='view_content'>进入后台</div>
+              </div>
+              <div class='caidang_view' ng-click='dealerBackstage()' ng-show="{{user.state == 1}}">
+                <div class='view_content'>经销商后台</div>
+              </div>
+              <div class='caidang_view' ng-click='dealerBackstage()' ng-show="{{user.state == 2}}">
+                <div class='view_content'>经销商后台</div>
+              </div>
+              <div class='caidang_view' ng-click='feedback()'>
+                <div class='view_content last'>投诉建议</div>
+              </div>
+            </div>
+            <!-- 头部 end -->
+          </div>
+
+
+          <!-- 菜单 start -->
+          <div class="dibu">
+            <div class="dibu_model">
+              <div class="model_img">
+                <a href="index.html?user={{user}}"><image class="img" src="images/index0.png"/></a>
+              </div>
+              <div class="model_text">首页</div>
+            </div>
+
+            <div class="dibu_model">
+              <div class="model_img">
+                <image class="img" src="images/find1.png"/>
+              </div>
+              <div class="model_text">订单</div>
+            </div>
+
+            <div class="dibu_model">
+              <div class="model_img">
+                <a href="myInfo.html?user={{user}}"><image class="img" src="images/my0.png"/></a>
+              </div>
+              <div class="model_text">我的</div>
+            </div>
+          </div>
+          <!-- 菜单 end -->
+        </div>
+
+        <!-- 输入经销商微信号 start-->
+        <div class='wxh {{dealer}}' ng-click='dealerBackstage();return false;' >
+          <div class='wxh_view' catchtap="dddd">
+            <div class='view_title'>输入微信号</div>
+            <div class="view_input">
+              <input class='input' ng-model="wxh" placeholder='请输入经销商微信号'></input>
+            </div>
+            <div class='view_btn' ng-click='logindealerBackstage()'>确定</div>
+          </div>
+        </div>
+        <!-- 输入经销商微信号 end-->
+
+        <!-- 脚本  -->
+        <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script type="text/javascript" src="js/myInfo.js" ></script>
+    <body>
+</html>
